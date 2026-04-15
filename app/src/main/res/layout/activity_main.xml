@@ -2,46 +2,93 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:orientation="vertical"
+    android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/fondo2">
+    android:background="@drawable/fonfo4"
+    android:orientation="vertical"
+    android:padding="32dp">
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Selecciona el tipo mascota: "
-        android:layout_marginBottom="8dp"/>
+        android:layout_marginBottom="16dp"
+        android:text="@string/selecciona_el_tipo_mascota"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp" />
 
     <Spinner
         android:id="@+id/spinnerTipo"
         android:layout_width="match_parent"
         android:layout_height="48dp"
-        android:layout_marginBottom="16dp"/>
+        android:layout_marginBottom="16dp"
+        android:background="#33FFFFFF" />
 
     <EditText
         android:id="@+id/etNombre"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
         android:hint="@string/nombre_de_la_mascota"
         android:inputType="textPersonName"
-        android:layout_marginBottom="16dp"
-        />
+        android:textColor="#FFFFFF"
+        android:textColorHint="#B3FFFFFF" />
 
     <EditText
         android:id="@+id/etEdad"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="32dp"
         android:hint="@string/edad_de_la_mascotas"
         android:inputType="number"
-        android:layout_marginBottom="24dp"
-        />
+        android:textColor="#FFFFFF"
+        android:textColorHint="#B3FFFFFF" />
 
     <Button
         android:id="@+id/btnCrear"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="60dp"
+        android:layout_marginBottom="24dp"
+        android:backgroundTint="@color/white"
+        android:text="@string/crear_mascota"
+        android:textColor="@color/black"
+        android:textStyle="bold" />
 
-        />
+    <TextView
+        android:id="@+id/tvResultado"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="24dp"
+        android:gravity="center"
+        android:text="@string/Info"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btnLadrar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:backgroundTint="@color/white"
+            android:text="@string/ladrar"
+            android:textColor="@color/black"
+            android:visibility="gone" />
+
+        <Button
+            android:id="@+id/btnMaullar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/white"
+            android:text="@string/maullar"
+            android:textColor="@color/black"
+            android:visibility="gone" />
+    </LinearLayout>
 
 </LinearLayout>

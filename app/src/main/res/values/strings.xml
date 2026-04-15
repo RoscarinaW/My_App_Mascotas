@@ -2,4 +2,9 @@
     <string name="app_name">My App Mascotas</string>
     <string name="nombre_de_la_mascota">Nombre de la mascota</string>
     <string name="edad_de_la_mascotas">Edad de la mascota</string>
+    <string name="crear_mascota">Crear Mascota</string>
+    <string name="Info">Info</string>
+    <string name="ladrar">Ladrar</string>
+    <string name="maullar">Maullar</string>
+    <string name="selecciona_el_tipo_mascota">Selecciona el tipo mascota:</string>
 </resources>
