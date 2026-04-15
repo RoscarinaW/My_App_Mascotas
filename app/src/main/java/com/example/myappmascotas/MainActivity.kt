@@ -1,5 +1,6 @@
 package com.example.myappmascotas
 
+import android.media.MediaPlayer
 import android.os.Bundle
 import android.view.View
 import android.widget.AdapterView
@@ -90,6 +91,11 @@ class MainActivity : AppCompatActivity() {
             if (mascotaAtual is Mascotas.Perro){
                 val perro = mascotaAtual as Mascotas.Perro
                 Toast.makeText(this, perro.ladrar(), Toast.LENGTH_SHORT).show()
+                val mpLadrar = MediaPlayer.create(this, R.raw.ladrido)
+                mpLadrar.start()
+                mpLadrar.setOnCompletionListener { reproductor ->
+                    reproductor.release()
+                }
             }
         }
 
@@ -97,6 +103,12 @@ class MainActivity : AppCompatActivity() {
             if (mascotaAtual is Mascotas.Gato) {
                 val gato = mascotaAtual as Mascotas.Gato
                 Toast.makeText(this, gato.maullar(), Toast.LENGTH_SHORT).show()
+
+                val mpMaullar = MediaPlayer.create(this, R.raw.maullido)
+                mpMaullar.start()
+                mpMaullar.setOnCompletionListener { reproductor ->
+                    reproductor.release()
+                }
             }
         }
 
